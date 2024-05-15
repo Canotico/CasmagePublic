@@ -8,9 +8,9 @@ Public repo with some systems used in the game I'm making, Casmage, which is a W
 A pulse-based system to allow for easy creation of things like Switches, Buttons, Levers, etc, in a Networked environment.
 
 The system defines the following elements:
-	- PulseEmitter (Actor)
-	- PulseReceiver (Component)
-	- PulseReceiverHelper (Interface)
+- PulseEmitter (Actor)
+- PulseReceiver (Component)
+- PulseReceiverHelper (Interface)
 
 ### PulseEmitter
 
@@ -24,17 +24,17 @@ It's Pulse value is **replicated** and also Saved so as to preserve its latest s
 
 PulseEmitters can be Engaged/Disengaged with, which allows the engaging Actor (commonly the PlayerCharacter) to directly alter their Pulse value. 
 The different modes an emitter can have are:
-	- **TOGGLE**
-		- When engaged, the Pulse value is flipped
-	- **HOLD**
-		- When engaged, the Pulse value is set to TRUE
-		- When disengaged, the Pulse value returns to FALSE
-	- **TIMER**
-		- When engaged, the Pulse value is set to TRUE
-		- After a specific amount of time, the emitter will set its Pulse value back to FALSE
-	- **TOGGLE_LOCK**
-		- When engaged, the Pulse value is set to TRUE
-		- After the initial engagement, the emitter will not be engageable anymore
+- **TOGGLE**
+	- When engaged, the Pulse value is flipped
+- **HOLD**
+	- When engaged, the Pulse value is set to TRUE
+	- When disengaged, the Pulse value returns to FALSE
+- **TIMER**
+	- When engaged, the Pulse value is set to TRUE
+	- After a specific amount of time, the emitter will set its Pulse value back to FALSE
+- **TOGGLE_LOCK**
+	- When engaged, the Pulse value is set to TRUE
+	- After the initial engagement, the emitter will not be engageable anymore
 
 Additionally, it's possible to set a PulseEmitter to invert their Pulse value, in the event that we want to essentially change
 what being ON/OFF means contextually.
@@ -57,8 +57,8 @@ to it will respond accordingly.
 #### Modes
 
 A PulseReceiver can be "powered On" in 2 different ways:
-	- All PulseEmitters are ON
-	- At least 1 PulseEmitter is ON
+- All PulseEmitters are ON
+- At least 1 PulseEmitter is ON
 
 This is defined on a per-receiver basis.
 
